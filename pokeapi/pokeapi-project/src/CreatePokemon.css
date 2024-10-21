@@ -1,0 +1,89 @@
+/* Estilos para el contenedor principal */
+.create-pokemon-container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilos para los encabezados */
+  .create-pokemon-header {
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 20px;
+  }
+  
+  /* Estilos para las etiquetas de formulario */
+  .create-pokemon-label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	color: #333;
+  }
+  
+  /* Estilos para los campos de selección (dropdown) */
+  .create-pokemon-select {
+	width: 90.1svw;
+	padding: 8px 0;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	font-size: 16px;
+  }
+  
+  /* Estilos para el campo de descripción */
+  .create-pokemon-input {
+	width: 89.8svw;
+	padding: 10px 0;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+  }
+  
+  /* Estilos para el botón de generar imagen */
+  .create-pokemon-button {
+	width: 90svw;
+	padding: 12px;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .create-pokemon-button:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+  }
+  
+  .create-pokemon-button:hover:enabled {
+	background-color: #45a049;
+  }
+  
+  /* Estilos para el indicador de carga */
+  .create-pokemon-loading {
+	text-align: center;
+	font-size: 18px;
+	color: #666;
+  }
+  
+  /* Estilos para la imagen generada */
+  .create-pokemon-image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 20px auto;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
