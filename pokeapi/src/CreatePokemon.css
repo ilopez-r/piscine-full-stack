@@ -1,0 +1,166 @@
+/* Estilos para el contenedor principal */
+
+.create-pokemon-container {
+	max-width: 1000px;
+	margin: auto;
+	padding: 20px;
+	font-family: 'Arial', sans-serif;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-details-container {
+	font-family: 'Arial', sans-serif;
+	display: flex;
+	width: 100%;
+	align-items:flex-start;
+	margin-top: 20px;
+} 
+
+.pokemon-name {
+	font-size: 30px; /* Ajusta el tamaño del nombre del Pokémon */
+	font-weight: bold; /* Resalta el nombre */
+	position: relative;
+	left: 5%;
+}
+.type{
+	position: relative;
+	left: 5%;
+}
+.pokemon-image {
+	width: 300px; /* Tamaño de la imagen */
+	height: 300px;
+}
+
+/* Estilos para los encabezados */
+.create-pokemon-header {
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+}
+
+/* Estilos para las etiquetas de formulario */
+.create-pokemon-label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	color: #333;
+}
+
+/* Estilos para los campos de selección (dropdown) */
+.create-pokemon-select {
+	width: 200px;
+	padding: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	font-size: 16px;
+	position: relative;
+	left: 5%;
+}
+
+.create-pokemon-select-2 {
+	width: 200px;
+	padding: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	font-size: 16px;
+	margin-bottom: 20px;
+	position: relative;
+	left: 5%;
+}
+
+/* Estilos para el campo de descripción */
+.create-pokemon-input {
+	width: 100%;
+	padding: 10px 0;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+/* Estilos para el botón de generar imagen */
+.create-pokemon-button {
+	width: 100%;
+	padding: 12px 0;
+	background-color: #4CAF50;
+	text-shadow: 1px 1px 2px black;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.pokemon-type {
+	display: inline-block;
+	width: 85px; /* Ancho fijo */
+	height: 30px; /* Altura fija */
+	text-align: center; /* Centra el texto */
+	text-shadow: 1px 1px 2px black;
+	border-radius: 5px; /* Bordes redondeados */
+	color: white; /* Texto en blanco */
+	margin-right: 5px; /* Espacio entre los elementos */
+	margin-top: -5px;
+	line-height: 30px; /* Centra verticalmente el texto */
+	border: 1px solid #000000;
+	border-radius: 20px;
+	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+	position: relative;
+	left: 5%;
+}
+
+.caja1{
+	width: 100%;
+	padding: 12px;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caja2{
+	width: 100%;
+	padding: 12px;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caja3 {
+	padding: 12px;
+	width: 100%;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-weakness {
+	position: relative;
+	left: 5%;
+}
+
+.pokemon-weakness ul {
+	display: flex; /* Usar flexbox para alinear en fila */
+	flex-wrap: wrap;/* Permitir que los elementos se envuelvan si es necesario */
+	padding: 0; /* Quitar el padding por defecto */
+	list-style-type: none; /* Quitar los puntos de la lista */
+	margin-top: 0px;
+	width: 300px;
+}
+
+.pokemon-weakness h4 {
+	margin: 0 0 5px;
+	font-weight: bold;
+}
+
+.pokemon-weakness li {
+	margin: 5px 0;
+}
