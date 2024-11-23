@@ -1,0 +1,308 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.game-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#welcome-title {
+    text-align: center;
+    font-size: 48px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#welcome-text {
+    font-size: 16px;
+    color: black;
+    background-color: rgba(207, 81, 12);
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: fadeIn 1.5s ease-in-out;
+    width: auto;
+    max-width: 80%;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-wrapper {
+    position: relative;
+    width: 80vw;
+    max-width: 320px;
+    aspect-ratio: 1;
+    
+}
+
+.grid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(92, 148, 252, 0.8);
+    width: 100%;
+    height: 100%;
+    max-width: 98%;
+}
+
+.grid-result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 106%;
+    height: 106%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 104%;
+}
+
+.game-over {
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    display: none;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes tileAppear {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+.tile-2 { background-color: #80d010; color: #ffffff; } /* Verde del monte */
+.tile-4 { background-color: #00a800; color: #ffffff; } /* Verde oscuro */
+.tile-8 { background-color: #fc9838; } /* Naranja más oscuro */
+.tile-16 { background-color: #cf510c; } /* Rojo ladrillo */
+.tile-32 { background-color: #bb3300; }
+.tile-64 { background-color: #992200; }
+.tile-128 { background-color: #772200; }
+.tile-256 { background-color: #551100; }
+.tile-512 { background-color: #440f00; }
+.tile-1024 { background-color: #330d00; }
+.tile-2048 { background-color: #220900; }
+
+#restart-btn {
+    background-color: #fc9838;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    margin-top: -20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#restart-btn:hover {
+    background-color: #c84c0c;
+}
+
+.score-container {
+    margin: 2rem 0;
+}
+
+#score, #best-score {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fc9838;
+    border-radius: 5px;
+    color: #ffffff;
+    margin: 0 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+    .grid-wrapper { 
+        width: 85vw;
+        max-width: 300px;
+        margin-left: -15px;
+    }
+    .grid-result {
+        padding: 1.5px;
+    }
+    .tile { font-size: 20px; }
+}
+
+@media (max-width: 352px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 2px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+}
+
+@media (max-width: 327px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 2px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+}
+
+@media (max-width: 291px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 2.5px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+    #score, #best-score {
+        margin: auto;
+    }
+}
+
+@media (max-width: 282px) {
+    #score{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    #best-score {
+        margin-right: 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 275px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 2.5px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+    #score{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 265px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 3px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+    #score{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 250px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 3.5px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+    #score{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 236px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 4px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+    #score{
+        align-items: center;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (max-width: 196px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 4.5px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+    #score{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 165px) {
+    .grid-wrapper {
+        width: 90vw;
+        max-width: 280px;
+    }
+    .grid-result {
+        padding: 5px;
+    }
+    .tile { font-size: 18px; }
+    .game-over { font-size: 30px; }
+    #score{
+        margin-bottom: 5px;
+    }
+}

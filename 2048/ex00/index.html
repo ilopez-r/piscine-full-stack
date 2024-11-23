@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="welcome-title">2048 Game</h1>
+    <div class="game-container">
+        <div class="grid-wrapper">
+            <div class="grid-container" id="grid-container"></div>
+            <div class="grid-result" id="grid-result">
+                <div id="gameOver" class="game-over">GAME OVER</div>
+                <div id="youWon" class="game-over">YOU WON!</div>
+            </div>
+        </div>
+        <div class="score-container">
+            <span id="score"></span>
+            <span id="best-score"></span>
+        </div>
+        <button id="restart-btn">Restart</button>
+        <h3 id="welcome-text">Use the arrow keys to move the squares. When two squares with the same number touch, their values will be added together in a single square. Reach 2048 to win.</h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
